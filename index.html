@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura | Minimal Wealth Analytics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-wrapper">
+        <aside class="sidebar">
+            <div class="brand-logo">
+                <div class="logo-mark">A</div>
+                <span>Aura</span>
+            </div>
+            <nav class="side-nav">
+                <a href="#" class="nav-link active"><i class="fas fa-chart-line"></i> Analytics</a>
+                <a href="#" class="nav-link"><i class="fas fa-star"></i> Wishlist</a>
+                <a href="#" class="nav-link"><i class="fas fa-bolt"></i> SIP Engine</a>
+                <a href="#" class="nav-link"><i class="fas fa-wallet"></i> Portfolio</a>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">AB</div>
+                <div class="user-info">
+                    <span class="role">Pro Investor</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-workspace">
+            <header class="top-header">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search NSE/BSE equities, mutual funds...">
+                </div>
+                <button class="action-btn"><i class="fas fa-bell"></i></button>
+            </header>
+
+            <div class="content-scroll">
+                <section class="live-ticker-section">
+                    <h2 class="section-title">Market Pulse</h2>
+                    <div class="ticker-grid" id="api-ticker-grid">
+                        <div class="loading-state">Fetching live market APIs...</div>
+                    </div>
+                </section>
+
+                <section class="analysis-section">
+                    <div class="analysis-header">
+                        <h2 class="section-title">Wishlist Analysis</h2>
+                        <span class="subtitle">Click an asset to view historical performance</span>
+                    </div>
+
+                    <div class="analysis-grid">
+                        <div class="wishlist-sidebar" id="wishlist-container">
+                        </div>
+
+                        <div class="chart-container 3d-lift">
+                            <div class="chart-meta">
+                                <h3 id="chart-title">Select an Asset</h3>
+                                <h1 id="chart-price" class="current-price">₹--</h1>
+                            </div>
+                            <div class="canvas-wrapper">
+                                <canvas id="analysisChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
